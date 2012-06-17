@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsp/jstl/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title> * Criptografar Mensagens *</title>	
+</head>
+<body>
+	<h1 align="center" style="FONT-FAMILY: 'SansSerif'; FONT-SIZE: xx-large; FONT-WEIGHT: normal;">  Cifra de Cesar </h1>
+	<br/>
+	<hr width="80%" />
+	<table cellspacing="20" cellpadding="20">
+		<h:form>
+			<tr>
+				<td>
+					<h:outputLabel value="Digite o Texto :" />
+				</td>
+				<td>
+					<h:inputTextarea value="#{criptoBean.mensOrigem}" />
+				</td>
+		</tr>
+		<tr>
+			<td>
+				<h:commandButton action="#{criptoBean.cifraFrase()}" value="Criptografar" />
+			</td>
+		
+		
+		</tr>
+			<tr>
+				<td>
+					<h:outputLabel value="Texto Criptografado : " />
+				</td>
+				<td>
+					<h:outputLabel value="#{criptoBean.mensCripto}" />
+				</td>
+			
+			</tr>
+	
+		</h:form>
+	</table>
+</body>
+</html>
